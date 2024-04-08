@@ -1,0 +1,406 @@
+/* ///////////////////////////////////// Home.js ////////////////////////////////////////////////// */
+h1 {
+    color: #6f3a34;
+    text-align: center;
+    font-family: "Laila", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+    margin: 0;
+  }
+  
+  h3 {
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    color: #595F5D;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    background-color: #eae2f4;
+  }
+  
+  header {
+    padding-top: 25px;
+    background: no-repeat url(images/header-gato.png);
+    background-position: bottom -12px right 80px;
+    background-size: 15%;
+    padding-bottom: 45px;
+    margin: 0;
+    background-color: white;
+  }
+  
+  nav {
+    margin: 0;
+    padding: 20px 30px;
+    color: #FFF8F0;
+    background-color: #B9929F;
+  }
+  
+  .menu-normal {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  select {
+    color: #FFF8F0;
+    border: none;
+    background-color: #B9929F;
+    cursor: pointer;
+    font-size: 16px;
+    width: 20px;
+  }
+  
+  .botonMenu {
+    border: 1px solid #FFF8F0;
+    border-radius: 5px;
+    background: none;
+    color: #FFF8F0;
+    padding: 7px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .botonMenu:hover {
+      background-color: #895866;
+      border: 1px solid #895866;
+  }
+  
+  .div-menu-boton {
+    display: none;
+  }
+  
+  .menu-boton {
+    color: white;
+    font-size: 20px;
+    border: none;
+    background: none;
+    display: none;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  
+  .cerrar-filtros {
+    color: white;
+    font-size: 20px;
+    border: none;
+    background: none;
+    display: none;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  
+  .contenedor-estadisticas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    color: #595F5D;
+  }
+  
+  .div-stadisticas{
+    display: none;
+    background-color: #eae2f4;
+    padding: 20px;
+    text-align: center;
+   }
+  
+  .boton-cerrar-estadisticas{
+    display: none;
+    background-color: #eae2f4;
+    border: none;
+    cursor: pointer;
+    margin: 10px 20px;
+    color: #595F5D;
+  }
+  
+  .boton-cerrar-estadisticas:hover{
+    color: #3a3e3d;
+    scale: 1.01;
+  }
+  
+  #rootHome {
+    background-color: #eae2f4;
+    padding: 10px 40px 5px 40px;
+  }
+  
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+  }
+  
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #6f3a34;
+  }
+  
+  .tarjeta {
+    width: 280px;
+    color: #595F5D;
+    background: linear-gradient(44.8deg, rgba(255, 136, 102, 0.67) -53.1%, rgba(255, 221, 136, 0.28) 49%);
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 30px;
+    height: 530px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  
+  .tarjeta:hover {
+    scale: 1.05;
+  }
+  
+  .tarjeta img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .tarjeta p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .descripcion {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  .datos {
+    font-weight: bold;
+    padding-left: 20px;
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+  
+  .divBoton {
+    width: 100%;
+    margin: 14px 0 5px 0;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #eae2f4;
+    padding: 5px 0 20px 0;
+    text-align: center;
+    font-style: italic;
+    color: #595F5D;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    header {
+      background: none;
+    }
+  
+    h1 {
+      font-size: 40px;
+    }
+  
+    h3 {
+      font-size: 15px;
+    }
+  
+    select {
+      font-size: 14px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    header {
+      background: none;
+    }
+  
+    footer {
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (max-width: 850px) {
+    header {
+      background: none;
+    }
+  
+    nav {
+      padding: 0;
+    }
+  
+    .div-menu-boton {
+      display: block;
+      padding: 17px 0;
+    }
+  
+    .menu-boton {
+      display: block;
+    }
+  
+    .menu-normal {
+      display: none;
+      flex-direction: column;
+      background-color: #AF8392;
+      color: white;
+      padding: 17px 0;
+    }
+    
+    select {
+      background-color: #AF8392;
+      margin: 5px 0;
+    }
+  
+    .tarjeta {
+      margin-top: 5px;
+      height: auto;
+    }
+    
+    .tarjeta p {
+      font-size: 14px;
+    }
+  
+    .botonMenu{
+      margin-top: 10px;
+    }
+  
+    #conteo{
+      margin-top: 5px;
+    }
+  }
+  
+  @media only screen and (min-width: 850px) {
+    .menu-normal {
+      display: flex !important;
+    }
+  }
+
+  /* ///////////////////////////////////// index.html ////////////////////////////////////////////////// */
+
+#popup-apikey{
+display: none;
+}
+
+/* Estilos de las paginas de chat */
+.contenedor-principal {
+  /* margin: 0 200px; */
+  background-color: #eae2f4;
+}
+
+/* contiene la imagen y el chat */
+.contenedor-foto-chat {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.imagen {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-right: 50px;
+}
+
+.contenedor-chat {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF8F0;
+  border-radius: 30px;
+  width: 500px;
+  height: 550px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.mensaje-gato {
+  background-color: #eae2f4;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  margin-right: 30%;
+}
+
+.mensaje-usuaria {
+  background-color: #FFF0C1;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  margin-left: 30%;
+}
+
+#mensajes {
+  height: 90%;
+  overflow-y: scroll;
+  color: #353837;
+}
+
+.negrita-mensajes {
+  font-weight: bold;
+  font-size: small;
+  margin: 0;
+  margin-bottom: 4px;
+  color: #595F5D;
+}
+
+.contenedor-input {
+  display: flex;
+  background-color: white;
+  margin: 10px;
+  border-radius: 20px;
+  align-items: center;
+}
+
+textarea {
+  border: none;
+  border-radius: 20px;
+  padding: 15px;
+  width: 85%;
+  resize: none;
+  font-family: "Inter", sans-serif;
+  color: #353837;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.boton-chat {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #B9929F;
+}
+
+#boton-apikey {
+  float: inline-end;
+  cursor: pointer;
+  font-size: 50px;
+  padding: 15px;
+  background-color: #B9929F;
+  margin: 20px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#popup-apikey {
+  width: 400px;
+  float: inline-end;
+  background-color: #eae2f4;
+}

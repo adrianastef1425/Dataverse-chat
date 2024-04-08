@@ -1,19 +1,39 @@
-// En este archivo definirás tus rutas e importarás los componentes que vas a renderizar.
+import { Home } from './views/Home.js';
+import { ChatGato } from './views/ChatGato.js';
+import { GatoInfo } from './views/GatoInfo.js';
+import { setRootEl, setRoutes, onURLChange } from './router.js';
+import {getApiKey, setApiKey} from './lib/apiKey.js'
 
-/*
-import Example from './views/Example.js';
+const routes = { 
+  '/': Home,
+  '/chatGato': ChatGato,
+  // '/chatGrupal': ChatGrupal,
+  '/gatoInfo': GatoInfo,
+  // '/ErrorGatuno': ErrorGatuno,
+};
 
-Ejemplo de definición de rutas:
+setRoutes(routes);
 
-const routes = {
-    "/": Example,
-    ...
-}
-*/
+window.addEventListener("DOMContentLoaded", () => {
+  setRootEl(document.querySelector("#root")); // rootEl = el
+  onURLChange(window.location) 
+});
 
-/*
-TODO:
-1.- Definir rutas en router.
-2.- Pasar "root element" a router.
-3.- Invocar el router para renderizar la vista correcta.
-*/
+window.addEventListener("popstate", () => {
+  onURLChange(window.location);
+});
+
+const botonAPIKey = document.querySelector("#boton-apikey");
+const popupAPIKey = document.querySelector("#popup-apikey");
+const botonGuardarAPIKey = document.querySelector("#boton-guardar-apikey");
+const inputAPIKey = document.querySelector("#input-apikey");
+
+botonAPIKey.addEventListener("click", function () {
+  popupAPIKey.style.display = "block";
+});
+
+botonGuardarAPIKey.addEventListener("click", function () {
+  setApiKey(inputAPIKey.value);
+  getApiKey();
+  popupAPIKey.style.display = "none";
+});
