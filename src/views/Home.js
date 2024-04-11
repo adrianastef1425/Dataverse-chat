@@ -71,7 +71,9 @@ export function Home(/*props*/) {
       <span id="conteo">Resultados: 24</span>
       <button id="botonBorrar" class="botonMenu" data-testid="button-clear">Borrar filtros</button>
       <button id="stats" class="botonMenu">Estadísticas</button>
+      <button id="chat-grupal" class="botonMenu">Chat Grupal</button>
     </div>
+    
   </nav>
   <main>
     <div class="contenedor-estadisticas">
@@ -167,6 +169,18 @@ export function Home(/*props*/) {
   }
 
   tarjetasVer(data);
+  //---------------------------------------------------------------------------------------------
+
+  //Funcionalidad de tChat Grupal----------------------------------------------------------
+  
+  const botonChatGrupal = divHome.querySelector("#chat-grupal");//selecciona todos los elementos li
+
+  botonChatGrupal.addEventListener("click", function () {
+    window.location.href = "/chatGrupal"
+    //navigateTo("/chatGrupal");
+  });
+    
+
   //---------------------------------------------------------------------------------------------
 
   // EVENTOS SELECT

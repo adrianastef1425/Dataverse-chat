@@ -1,13 +1,14 @@
 import { Home } from './views/Home.js';
 import { ChatGato } from './views/ChatGato.js';
 import { GatoInfo } from './views/GatoInfo.js';
+import { ChatGrupal } from './views/ChatGrupal.js';
 import { setRootEl, setRoutes, onURLChange } from './router.js';
 import {getApiKey, setApiKey} from './lib/apiKey.js'
 
 const routes = { 
   '/': Home,
   '/chatGato': ChatGato,
-  // '/chatGrupal': ChatGrupal,
+  '/chatGrupal': ChatGrupal,
   '/gatoInfo': GatoInfo,
   // '/ErrorGatuno': ErrorGatuno,
 };

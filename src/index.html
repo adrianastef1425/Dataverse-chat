@@ -16,17 +16,19 @@
   <body>
     <div id="root"></div>
 
-    <div id="popup-apikey">
-      <form>
-        <input type="text" id="input-apikey" placeholder="Ingresa el APIkey">
-        <button type="button" id="boton-guardar-apikey">Guardar</button>
-        <span id="api-verificada"></span>
-      </form>
-    </div>
+    
+      <div id="popup-apikey">
+        
+          <input id="input-apikey" placeholder="Ingresa el APIkey">
+          <button id="boton-guardar-apikey">Guardar</button>
+          <span id="api-verificada"></span>
+        
+      </div>
 
-    <div>
-      <button id="boton-apikey">🔐</button>
-    </div>
+      <div id="contenedor-boton-apikey">
+        <button id="boton-apikey">🔐</button>
+      </div>
+    
 
     <script src="index.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>

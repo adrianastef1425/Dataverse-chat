@@ -10,8 +10,6 @@ export const setRoutes = (routes) => {
 }
 
 const queryStringToObject = (queryString) => {
-  // const params = new URLSearchParams("foo=1&bar=2");
-  // const params = new URLSearchParams(queryString); // ("id=persa")
   const object = {};
   for (const [key, value] of queryString) {
     object[key] = value;
@@ -35,11 +33,11 @@ const renderView = (pathname, props ={}) => {
 } 
 
 export const navigateTo = (pathname, props) => {
-  // url que no funciona completamente
-  // const url = new URL(location);
-  // url.searchParams.set("id", props.id);
-  const url = pathname + "?id=" + props.id;
-  window.history.pushState({}, "", url);
+  //url que no funciona completamente
+  //const url = new URL(location);
+  //url.searchParams.set("id", props.id);
+  //const url = pathname + "?id=" + props.id;
+  window.history.pushState({}, pathname, `${window.location.origin + pathname}${props ? "?id=" + props.id : ""}`);
   renderView(pathname, props);
 }
 
