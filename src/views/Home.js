@@ -176,8 +176,8 @@ export function Home(/*props*/) {
   const botonChatGrupal = divHome.querySelector("#chat-grupal");//selecciona todos los elementos li
 
   botonChatGrupal.addEventListener("click", function () {
-    window.location.href = "/chatGrupal"
-    //navigateTo("/chatGrupal");
+    //window.location.href = "/chatGrupal"
+    navigateTo("/chatGrupal");
   });
     
 

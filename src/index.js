@@ -2,6 +2,7 @@ import { Home } from './views/Home.js';
 import { ChatGato } from './views/ChatGato.js';
 import { GatoInfo } from './views/GatoInfo.js';
 import { ChatGrupal } from './views/ChatGrupal.js';
+import { ErrorGatuno } from './views/ErrorGatuno.js';
 import { setRootEl, setRoutes, onURLChange } from './router.js';
 import {getApiKey, setApiKey} from './lib/apiKey.js'
 
@@ -10,7 +11,7 @@ const routes = {
   '/chatGato': ChatGato,
   '/chatGrupal': ChatGrupal,
   '/gatoInfo': GatoInfo,
-  // '/ErrorGatuno': ErrorGatuno,
+  '/errorGatuno': ErrorGatuno,
 };
 
 setRoutes(routes);

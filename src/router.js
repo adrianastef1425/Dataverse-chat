@@ -23,8 +23,17 @@ const queryStringToObject = (queryString) => {
 
 const renderView = (pathname, props ={}) => { 
   rootEl.innerHTML = "";//Colocarlo en otro lugar //mejorar //OH Lunes o martes
-  rootEl.appendChild(ROUTES[pathname](props));
+  //rootEl.appendChild(ROUTES[pathname](props));
 
+  if(!ROUTES[pathname]){
+    //rootEl.appendChild(ROUTES["/errorGatuno"]);
+    // Si no existe, redirigir a la ruta de error
+    window.history.pushState({}, "/errorGatuno", `${window.location.origin}/errorGatuno`);
+    // Actualizar pathname
+    pathname = "/errorGatuno";
+  } 
+  
+  rootEl.appendChild(ROUTES[pathname](props));
   // clear the root element
   // find the correct view in ROUTES for the pathname
   // in case not found render the error view
@@ -38,6 +47,7 @@ export const navigateTo = (pathname, props) => {
   //url.searchParams.set("id", props.id);
   //const url = pathname + "?id=" + props.id;
   window.history.pushState({}, pathname, `${window.location.origin + pathname}${props ? "?id=" + props.id : ""}`);
+  window.scrollTo(0, 0); // Reinicia el scroll al inicio de la página
   renderView(pathname, props);
 }
 

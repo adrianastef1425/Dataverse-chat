@@ -412,7 +412,7 @@ textarea:focus {
   flex-direction: column;
   overflow-y: scroll;
   height: 550px;
-  scrollbar-color: #B9929F #eae2f4 ;
+  scrollbar-color: #B9929F transparent ;
   margin-right: 50px;
   padding-right: 30px;
 }
