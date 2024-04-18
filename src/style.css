@@ -480,12 +480,13 @@ textarea:focus {
     box-shadow: none;
     width: 100%;
     padding: 0;
+    height: 100vh;
   }
 
   .contenedor-chat {
     border-radius: 0;
     box-shadow: none;
-    height: 100vh;
+    height: 100%;
   }
 
   .div-Chat {
