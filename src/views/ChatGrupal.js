@@ -2,7 +2,7 @@ import data from '../data/dataset.js';
 import { communicateWithOpenAI } from '../lib/openAIApi.js';
 import { navigateTo } from '../router.js';
 
-export function ChatGrupal() {
+function ChatGrupal() {
 
   const divChatGrupal = document.createElement("div");
   divChatGrupal.classList.add("div-Chat");
@@ -96,3 +96,5 @@ export function ChatGrupal() {
 
   return divChatGrupal;
 }
+
+export default ChatGrupal;

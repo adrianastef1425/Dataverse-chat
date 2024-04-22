@@ -1,10 +1,10 @@
-import { Home } from './views/Home.js';
-import { ChatGato } from './views/ChatGato.js';
-import { GatoInfo } from './views/GatoInfo.js';
-import { ChatGrupal } from './views/ChatGrupal.js';
-import { ErrorGatuno } from './views/ErrorGatuno.js';
+import Home from './views/Home.js';
+import ChatGato from './views/ChatGato.js';
+import GatoInfo from './views/GatoInfo.js';
+import ChatGrupal from './views/ChatGrupal.js';
+import ErrorGatuno from './views/ErrorGatuno.js';
 import { setRootEl, setRoutes, onURLChange } from './router.js';
-import {getApiKey, setApiKey} from './lib/apiKey.js'
+import {/*getApiKey, */setApiKey} from './lib/apiKey.js'
 
 const routes = { 
   '/': Home,
@@ -21,7 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
   onURLChange(window.location)
 });
 
-//Guardar historial
+//Navegar hacia atrás o adelante de acuerdo al historial del navegador
 window.addEventListener("popstate", () => {
   onURLChange(window.location);
 });
@@ -38,7 +38,7 @@ botonAPIKey.addEventListener("click", function () {
 
 botonGuardarAPIKey.addEventListener("click", function () {
   setApiKey(inputAPIKey.value);
-  getApiKey();
+  // getApiKey();
   popupAPIKey.style.display = "none";
 });
 

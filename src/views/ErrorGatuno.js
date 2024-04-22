@@ -1,6 +1,6 @@
 import { navigateTo } from '../router.js';
 
-export function ErrorGatuno() {
+function ErrorGatuno() {
   const divError = document.createElement('div');
   divError.innerHTML = `
     <div>
@@ -17,3 +17,5 @@ export function ErrorGatuno() {
 
   return divError;
 }
+
+export default ErrorGatuno;

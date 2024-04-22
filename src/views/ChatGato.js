@@ -2,7 +2,7 @@ import data from '../data/dataset.js';
 import { communicateWithOpenAI } from '../lib/openAIApi.js';
 import { navigateTo } from '../router.js';
 
-export function ChatGato(props) {
+function ChatGato(props) {
 
   const divChatGato = document.createElement("div");
   divChatGato.classList.add("div-Chat");
@@ -42,6 +42,14 @@ export function ChatGato(props) {
       mensajes.appendChild(primerParrafoGato);
 
       botonEnviarInput.addEventListener("click", function () {
+        const parrafoGato = document.createElement("div");
+        const parrafoUsuaria = document.createElement("div");
+        parrafoGato.classList.add("mensaje-gato");
+        parrafoUsuaria.classList.add("mensaje-usuaria");
+
+        parrafoUsuaria.innerHTML = `<p class="negrita-mensajes">Tú 👩🏻</p> ${inputUsuaria.value}`;
+        parrafoGato.innerHTML = "Escribiendo...";
+
         const prompt = [
           {
             "role": "system",
@@ -52,14 +60,6 @@ export function ChatGato(props) {
             "content": inputUsuaria.value
           }
         ];
-
-        const parrafoGato = document.createElement("div");
-        const parrafoUsuaria = document.createElement("div");
-        parrafoGato.classList.add("mensaje-gato");
-        parrafoUsuaria.classList.add("mensaje-usuaria");
-
-        parrafoUsuaria.innerHTML = `<p class="negrita-mensajes">Tú 👩🏻</p> ${inputUsuaria.value}`;
-        parrafoGato.innerHTML = "Escribiendo...";
 
         communicateWithOpenAI(prompt)
           .then(response => {
@@ -82,3 +82,5 @@ export function ChatGato(props) {
 
   return divChatGato;
 }
+
+export default ChatGato;

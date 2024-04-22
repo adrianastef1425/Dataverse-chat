@@ -1,7 +1,7 @@
 import data from '../data/dataset.js';
 import { navigateTo } from '../router.js';
 
-export function GatoInfo(props) {
+function GatoInfo(props) {
   const divGatoInfo = document.createElement("div");
   divGatoInfo.classList.add("div-Chat");
   for (let i = 0; i < data.length; i++) {
@@ -63,3 +63,5 @@ export function GatoInfo(props) {
   }
   return divGatoInfo;
 }
+
+export default GatoInfo;

@@ -27,7 +27,7 @@ function renderItems(gatos) {
   return nuevoUl;
 }
 
-export function Home() {
+function Home() {
   const divHome = document.createElement('div');
   //////////////////////////////////////// index.html (DATAVERSE) ///////////////////////////
   divHome.innerHTML = `<header>
@@ -151,7 +151,7 @@ export function Home() {
     return gatosOrdenados;
   }
 
-  //Funcionalidad de boton ver mas----------------------------------------------------------
+  //Funcionalidad de  ver mas----------------------------------------------------------
   function tarjetasVer(data) {
     const botonesVer = divHome.querySelectorAll("#ver-info");//selecciona todos los elementos li
     for (let i = 0; i < data.length; i++) {
@@ -159,7 +159,7 @@ export function Home() {
         navigateTo("/gatoInfo", {id: data[i].id});
       });
     }
-
+    //Funcionalidad de Chat Individual----------------------------------------------------------
     const botonesChat = divHome.querySelectorAll("#chat-gato");
     for (let i = 0; i < data.length; i++) {
       botonesChat[i].addEventListener("click", function () {
@@ -169,10 +169,8 @@ export function Home() {
   }
 
   tarjetasVer(data);
-  //---------------------------------------------------------------------------------------------
-
-  //Funcionalidad de Chat Grupal----------------------------------------------------------
   
+  //Funcionalidad de Chat Grupal----------------------------------------------------------
   const botonChatGrupal = divHome.querySelector("#chat-grupal");//selecciona todos los elementos li
 
   botonChatGrupal.addEventListener("click", function () {
@@ -264,3 +262,5 @@ export function Home() {
   
   return divHome;
 }
+
+export default Home;
