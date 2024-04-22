@@ -1,306 +1,240 @@
 /* ///////////////////////////////////// Home.js ////////////////////////////////////////////////// */
 h1 {
-    color: #6f3a34;
-    text-align: center;
-    font-family: "Laila", serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 60px;
-    margin: 0;
-  }
-  
-  h3 {
-    text-align: center;
-    margin: 0;
-    font-size: 18px;
-    color: #595F5D;
-  }
-  
-  body {
-    font-family: "Inter", sans-serif;
-    margin: 0;
-    background-color: #eae2f4;
-  }
-  
-  header {
-    padding-top: 25px;
-    background: no-repeat url(images/header-gato.png);
-    background-position: bottom -12px right 80px;
-    background-size: 15%;
-    padding-bottom: 45px;
-    margin: 0;
-    background-color: white;
-  }
-  
-  nav {
-    margin: 0;
-    padding: 20px 30px;
-    color: #FFF8F0;
-    background-color: #B9929F;
-  }
-  
-  .menu-normal {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  
-  select {
-    color: #FFF8F0;
-    border: none;
-    background-color: #B9929F;
-    cursor: pointer;
-    font-size: 16px;
-    width: 20px;
-  }
-  
-  .botonMenu {
-    border: 1px solid #FFF8F0;
-    border-radius: 5px;
-    background: none;
-    color: #FFF8F0;
-    padding: 7px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .botonMenu:hover {
-      background-color: #895866;
-      border: 1px solid #895866;
-  }
-  
-  .div-menu-boton {
-    display: none;
-  }
-  
-  .menu-boton {
-    color: white;
-    font-size: 20px;
-    border: none;
-    background: none;
-    display: none;
-    cursor: pointer;
-    margin: 0 auto;
-  }
-  
-  .cerrar-filtros {
-    color: white;
-    font-size: 20px;
-    border: none;
-    background: none;
-    display: none;
-    cursor: pointer;
-    margin: 0 auto;
-  }
-  
-  .contenedor-estadisticas{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 400px;
-    margin: 0 auto;
-    color: #595F5D;
-  }
-  
-  .div-stadisticas{
-    display: none;
-    background-color: #eae2f4;
-    padding: 20px;
-    text-align: center;
-   }
-  
-  .boton-cerrar-estadisticas{
-    display: none;
-    background-color: #eae2f4;
-    border: none;
-    cursor: pointer;
-    margin: 10px 20px;
-    color: #595F5D;
-  }
-  
-  .boton-cerrar-estadisticas:hover{
-    color: #3a3e3d;
-    scale: 1.01;
-  }
-  
-  #rootHome {
-    background-color: #eae2f4;
-    padding: 10px 40px 5px 40px;
-  }
-  
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 0;
-  }
-  
-  h2 {
-    font-size: 24px;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #6f3a34;
-  }
-  
-  .tarjeta {
-    width: 280px;
-    color: #595F5D;
-    background: linear-gradient(44.8deg, rgba(255, 136, 102, 0.67) -53.1%, rgba(255, 221, 136, 0.28) 49%);
-    border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding: 30px;
-    height: 550px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-  
-  .tarjeta img {
-    width: 100%;
-    border-radius: 50%;
-  }
-  
-  .tarjeta p {
-    margin: 0;
-    font-size: 16px;
-  }
-  
-  .descripcion {
-    text-align: center;
-    padding-bottom: 10px;
-  }
-  
-  .datos {
-    font-weight: bold;
-    padding-left: 20px;
-  }
-  
-  hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-  }
-  
-  .divBoton {
-    width: 100%;
-    margin: 14px 0 5px 0;
-    text-align: center;
-  }
-  
-  footer {
-    background-color: #eae2f4;
-    padding: 5px 0 20px 0;
-    text-align: center;
-    font-style: italic;
-    color: #595F5D;
-  }
-  
-  footer p {
-    margin: 0;
-  }
-  
-  @media only screen and (max-width: 500px) {
-    header {
-      background: none;
-    }
-  
-    h1 {
-      font-size: 40px;
-    }
-  
-    h3 {
-      font-size: 15px;
-    }
-  
-    select {
-      font-size: 14px;
-    }
-  
-    h2 {
-      font-size: 22px;
-    }
-  
-    header {
-      background: none;
-    }
-  
-    footer {
-      font-size: 14px;
-    }
-  }
-  
-  @media only screen and (max-width: 850px) {
-    header {
-      background: none;
-    }
-  
-    nav {
-      padding: 0;
-    }
-  
-    .div-menu-boton {
-      display: block;
-      padding: 17px 0;
-    }
-  
-    .menu-boton {
-      display: block;
-    }
-  
-    .menu-normal {
-      display: none;
-      flex-direction: column;
-      background-color: #AF8392;
-      color: white;
-      padding: 17px 0;
-    }
-    
-    select {
-      background-color: #AF8392;
-      margin: 5px 0;
-    }
-  
-    .tarjeta {
-      margin-top: 5px;
-      height: auto;
-    }
-    
-    .tarjeta p {
-      font-size: 14px;
-    }
-  
-    .botonMenu{
-      margin-top: 10px;
-    }
-  
-    #conteo{
-      margin-top: 5px;
-    }
-  }
-  
-  @media only screen and (min-width: 850px) {
-    .menu-normal {
-      display: flex !important;
-    }
-  }
-
-  /* ///////////////////////////////////// index.html ////////////////////////////////////////////////// */
-
-#popup-apikey{
-display: none;
+  color: #6f3a34;
+  text-align: center;
+  font-family: "Laila", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+  margin: 0;
 }
 
-/* Estilos de las paginas de chat */
+h3 {
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  color: #595F5D;
+}
 
-/* .contenedor-principal {
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
   background-color: #eae2f4;
-} */
+}
 
-/* contiene la imagen y el chat */
-.contenedor-foto-chat {
+header {
+  padding-top: 25px;
+  background: no-repeat url(images/header-gato.png);
+  background-position: bottom -12px right 80px;
+  background-size: 15%;
+  padding-bottom: 45px;
+  margin: 0;
+  background-color: white;
+}
+
+nav {
+  margin: 0;
+  padding: 20px 30px;
+  color: #FFF8F0;
+  background-color: #B9929F;
+}
+
+.menu-normal {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+}
+
+select {
+  color: #FFF8F0;
+  border: none;
+  background-color: #B9929F;
+  cursor: pointer;
+  font-size: 16px;
+  width: 20px;
+}
+
+.botonMenu {
+  border: 1px solid #FFF8F0;
+  border-radius: 5px;
+  background: none;
+  color: #FFF8F0;
+  padding: 7px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.botonMenu:hover {
+  background-color: #895866;
+  border: 1px solid #895866;
+}
+
+.div-menu-boton {
+  display: none;
+}
+
+.menu-boton {
+  color: white;
+  font-size: 20px;
+  border: none;
+  background: none;
+  display: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.cerrar-filtros {
+  color: white;
+  font-size: 20px;
+  border: none;
+  background: none;
+  display: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.contenedor-estadisticas {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  color: #595F5D;
+}
+
+.div-stadisticas {
+  display: none;
+  background-color: #eae2f4;
+  padding: 20px;
+  text-align: center;
+}
+
+.boton-cerrar-estadisticas {
+  display: none;
+  background-color: #eae2f4;
+  border: none;
+  cursor: pointer;
+  margin: 10px 20px;
+  color: #595F5D;
+}
+
+.boton-cerrar-estadisticas:hover {
+  color: #3a3e3d;
+  scale: 1.01;
+}
+
+#rootHome {
+  background-color: #eae2f4;
+  padding: 10px 40px 5px 40px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
+}
+
+h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #6f3a34;
+}
+
+.tarjeta {
+  width: 280px;
+  color: #595F5D;
+  background: linear-gradient(44.8deg, rgba(255, 136, 102, 0.67) -53.1%, rgba(255, 221, 136, 0.28) 49%);
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 30px;
+  height: 570px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tarjeta img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.tarjeta p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.descripcion {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.datos {
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.divBoton {
+  width: 100%;
+  margin: 14px 0 5px 0;
+  text-align: center;
+}
+
+footer {
+  background-color: #eae2f4;
+  padding: 5px 0 20px 0;
+  text-align: center;
+  font-style: italic;
+  color: #595F5D;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 500px) {
+  header {
+    background: none;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  select {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  header {
+    background: none;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+/* ///////////////////////////////////// CSS vistas Chat y APIkey ////////////////////////////////////////////////// */
+
+.contenedor-foto-chat {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   width: 900px;
   padding: 30px;
@@ -312,9 +246,9 @@ display: none;
 
 .imagen {
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+  margin-left: 30px;
 }
 
 .contenedor-chat {
@@ -322,8 +256,7 @@ display: none;
   flex-direction: column;
   background-color: #FFF8F0;
   border-radius: 30px;
-  width: 500px;
-  height: 550px;
+  height: 500px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
@@ -401,39 +334,51 @@ textarea:focus {
 }
 
 #popup-apikey {
-  width: 400px;
-  background-color: none;
+  width: 250px;
+  background-color: white;
   position: fixed;
-  top: 75% ; left: 80%;
+  top: 70%;
+  left: 80%;
+  display: none;
+  padding: 0 10px 10px 10px;
+  border-radius: 5px;
 }
 
-#imagenes-chat{
+#cerrar-popup-apikey {
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: right;
+}
+
+#imagenes-chat {
   display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-  height: 550px;
-  scrollbar-color: #B9929F transparent ;
-  margin-right: 50px;
-  padding-right: 30px;
+  flex-direction: row;
+  overflow-x: scroll;
+  scrollbar-color: #B9929F transparent;
+  padding-bottom: 20px;
 }
 
-.div-Chat{
+.div-Chat {
   background: no-repeat url(images/gatos-campo-2.jpg);
   background-size: 100%;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
+  padding-top: 20px;
 }
 
-#contenedor-boton-apikey{
+#contenedor-boton-apikey {
   position: fixed;
-  top: 80% ; left: 90%;
+  top: 80%;
+  left: 90%;
 }
 
-.div-botones-tarjetas{
+.div-botones-tarjetas {
   display: flex;
   justify-content: center;
+  margin-top: 15px;
 }
 
-.boton-tarjeta{
+.boton-tarjeta {
   border: none;
   border-radius: 5px;
   background: #B9929F;
@@ -455,21 +400,161 @@ textarea:focus {
   font-family: "Inter", sans-serif;
   font-size: 44px;
   padding: 25px;
-  /* -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: white; */
 }
 
 .div-image-chat {
   display: flex;
-  flex-direction: column;
   color: #4d5351;
-  width: 240px;
-  text-align: center;
+  margin-bottom: 20px;
 }
 
-.imagen-chat-grupal{
+.imagen-chat-grupal {
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  margin-bottom: 15px;
+  width: 130px;
+  height: 130px;
+  margin: 10px;
+}
+
+.titulo-boton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: -20px;
+}
+
+.div-descripcion-info {
+  padding: 0 25px 25px 25px;
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+    background-color: white;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  .div-menu-boton {
+    display: block;
+    padding: 17px 0;
+  }
+
+  .menu-boton {
+    display: block;
+  }
+
+  .menu-normal {
+    display: none;
+    flex-direction: column;
+    background-color: #AF8392;
+    color: white;
+    padding: 17px 0;
+  }
+
+  select {
+    background-color: #AF8392;
+    margin: 5px 0;
+  }
+
+  .tarjeta {
+    margin-top: 5px;
+    height: auto;
+  }
+
+  .tarjeta p {
+    font-size: 14px;
+  }
+
+  .botonMenu {
+    margin-top: 10px;
+  }
+
+  #conteo {
+    margin-top: 5px;
+  }
+
+  .contenedor-foto-chat {
+    border-radius: 0;
+    box-shadow: none;
+    width: 100%;
+    padding: 0;
+    height: 100vh;
+  }
+
+  .contenedor-chat {
+    border-radius: 0;
+    box-shadow: none;
+    height: 100%;
+  }
+
+  .div-Chat {
+    background: none;
+    padding: 0;
+  }
+
+  .div-image-chat {
+    align-items: center;
+    margin-bottom: 0;
+    padding: 10px;
+  }
+
+  .div-vacio-apikey {
+    width: 50px;
+  }
+
+  .titulo-chat {
+    font-size: 25px;
+    padding: 0;
+    margin-left: 10px;
+    width: 200px;
+  }
+
+  .imagen {
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+  }
+
+  #contenedor-boton-apikey {
+    top: 2.5%;
+    left: 83%;
+  }
+
+  #boton-apikey {
+    font-size: 25px;
+    padding: 10px;
+    margin: 0;
+    box-shadow: none;
+    background-color: rgb(175, 131, 146, 0.5);
+  }
+
+  #popup-apikey {
+    width: 200px;
+    background-color: none;
+    position: fixed;
+    top: 12%;
+    left: 45%;
+    display: none;
+  }
+
+  #imagenes-chat {
+    margin: 5px;
+    padding-bottom: 5px;
+  }
+  .imagen-chat-grupal {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+  }
+  .titulo-boton {
+    margin-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .menu-normal {
+    display: flex !important;
+  }
 }

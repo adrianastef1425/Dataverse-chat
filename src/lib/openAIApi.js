@@ -1,11 +1,10 @@
 import { getApiKey } from './apiKey.js';
 
 export const communicateWithOpenAI = (messages) => {
-  //Aquí es donde debes implementar la petición con fetch o axios
   const apiKey = getApiKey();
-  const url = 'https://api.openai.com/v1/chat/completions';
+  const url = 'https://api.openai.com/v1/chat/completions'; //URL de la API de OpenAI chat//endpoint
 
-  return axios.post(url, {
+  return axios.post(url, { //Envía la solicitud HTTP post al endpoint de OpenAI chat
     messages,
     max_tokens: 150,
     temperature: 1.2,
@@ -16,7 +15,7 @@ export const communicateWithOpenAI = (messages) => {
       'Content-Type': 'application/json'
     }
   })
-    .then(response => {
+    .then(response => { //funcion arrow que retorna el contenido de la respuesta de la API
       return response.data.choices[0].message.content;
     })
     // .catch(error => {

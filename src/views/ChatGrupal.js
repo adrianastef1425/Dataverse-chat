@@ -1,27 +1,37 @@
 import data from '../data/dataset.js';
 import { communicateWithOpenAI } from '../lib/openAIApi.js';
+import { navigateTo } from '../router.js';
 
-export function ChatGrupal(/*props*/) {
+function ChatGrupal() {
 
   const divChatGrupal = document.createElement("div");
   divChatGrupal.classList.add("div-Chat");
   divChatGrupal.innerHTML = `
-    <h1 class="titulo-chat">Chatea con todos los gatos</h1>
     <div class="contenedor-foto-chat">
-        <div id="imagenes-chat"></div>
-        <div class="contenedor-chat">
+      <div class="titulo-boton">
+        <button id="volver-home" class="boton-chat">◀︎</button>
+        <h1 class="titulo-chat">Chatea con todos los gatos</h1>
+        <div class="div-vacio-apikey"></div>  
+      </div>
+      <div id="imagenes-chat"></div>
+      <div class="contenedor-chat">
         <div id="mensajes"></div>
         <div class="contenedor-input">
             <textarea id="usuaria-input" placeholder="Escribe tu mensaje..." rows="3"></textarea>
             <button id="boton-enviar-input" class="boton-chat">▶</button>
         </div>
-        </div>
+      </div>
     </div>`
 
   const imagenesChat = divChatGrupal.querySelector("#imagenes-chat");
 
+  const volverHome = divChatGrupal.querySelector("#volver-home");
+  volverHome.addEventListener("click", function () {
+    navigateTo("/");
+  })
+
   data.forEach(gatito => {
-    imagenesChat.innerHTML += `<img class="imagen-chat-grupal" src="${gatito.imageUrl}" alt="${gatito.id}"></img>` 
+    imagenesChat.innerHTML += `<img class="imagen-chat-grupal" src="${gatito.imageUrl}" alt="${gatito.id}"></img>`
   });
 
   const mensajes = divChatGrupal.querySelector("#mensajes");
@@ -52,7 +62,7 @@ export function ChatGrupal(/*props*/) {
             "content": inputTexto
           }
         ];
-  
+
         return communicateWithOpenAI(prompt)
           .then(response => {
             return {
@@ -68,7 +78,6 @@ export function ChatGrupal(/*props*/) {
             };
           });
       });
-      console.log(promesas)
 
       Promise.all(promesas)
         .then(responses => {
@@ -79,6 +88,7 @@ export function ChatGrupal(/*props*/) {
             mensajes.appendChild(parrafoGato);
           });
         });
+
     }
 
     inputUsuaria.value = "";
@@ -86,3 +96,5 @@ export function ChatGrupal(/*props*/) {
 
   return divChatGrupal;
 }
+
+export default ChatGrupal;
